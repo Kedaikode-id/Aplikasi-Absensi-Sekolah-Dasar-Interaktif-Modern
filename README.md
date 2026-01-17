@@ -85,16 +85,6 @@ cp -r . ~/xampp/htdocs/sistem-absensi-sd/
 # Buka phpMyAdmin
 http://localhost/phpmyadmin
 
-# Buat database baru
-CREATE DATABASE sistem_absensi;
-
-# Import SQL script
-- Buka database sistem_absensi
-- Klik tab SQL
-- Copy paste isi file: database/struktur_database.sql
-- Klik Go
-```
-
 #### 4. Verifikasi Koneksi
 ```bash
 # Akses halaman test (opsional)
@@ -191,51 +181,6 @@ Solusi:
 2. Pastikan semua tabel ada
 3. Check struktur tabel di phpMyAdmin
 ```
-
-**Untuk troubleshooting lebih detail, lihat file `docs/TROUBLESHOOTING.md`**
-
-## 📊 Struktur Database
-
-### Tabel `users`
-```sql
-- id (INT) - Primary Key
-- username (VARCHAR) - Unique
-- password (VARCHAR) - MD5 Hash
-- nama_lengkap (VARCHAR)
-- role (ENUM) - 'guru' atau 'kepala_sekolah'
-- created_at (TIMESTAMP)
-```
-
-### Tabel `siswa`
-```sql
-- id (INT) - Primary Key
-- nisn (VARCHAR) - Unique
-- nama_siswa (VARCHAR)
-- jenis_kelamin (ENUM)
-- kelas (INT) - 1-6
-- created_at (TIMESTAMP)
-```
-
-### Tabel `absensi`
-```sql
-- id (INT) - Primary Key
-- siswa_id (INT) - Foreign Key
-- tanggal_absensi (DATE)
-- status (ENUM) - 'Hadir', 'Izin', 'Alfa', 'Sakit'
-- keterangan (TEXT)
-- created_by (INT) - Foreign Key
-- created_at (TIMESTAMP)
-```
-
-### Tabel `hari_libur`
-```sql
-- id (INT) - Primary Key
-- nama_libur (VARCHAR)
-- tanggal_mulai (DATE)
-- tanggal_selesai (DATE)
-- created_at (TIMESTAMP)
-```
-
 ## 🔒 Keamanan
 
 ✅ **Implementasi Keamanan:**
@@ -251,17 +196,6 @@ Solusi:
 - Backup database secara berkala
 - Jangan share akun admin dengan semua orang
 - Update PHP dan MySQL secara regular
-
-## 📈 Fitur Pengembangan Selanjutnya
-
-- [ ] SMS notifikasi ke orang tua
-- [ ] Grafik statistik kehadiran
-- [ ] Import data siswa dari Excel
-- [ ] Reset password self-service
-- [ ] Laporan cetak dengan format rapi
-- [ ] Dashboard analytics mendalam
-- [ ] Multi-user support
-- [ ] Backup & restore otomatis
 
 ## 🤝 Kontribusi
 
