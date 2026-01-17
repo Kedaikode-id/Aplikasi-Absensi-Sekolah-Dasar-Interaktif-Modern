@@ -46,7 +46,7 @@ Sistem informasi manajemen kehadiran siswa yang modern, responsif, dan user-frie
 
 ## 📞 Support & Kontak
 
-Jika ada pertanyaan atau butuh bantuan:
+ Informasi Database:
 
 - 📧 Email: [satriyabilda07@gmail.com]
 - 💬 Kontak Whatsapp: [0853-3526-6494]
